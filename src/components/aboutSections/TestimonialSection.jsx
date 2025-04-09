@@ -1,6 +1,6 @@
 import React from "react";
-import AZ from "../../assets/images/azlogoNew.png";
-import customer from "../../assets/images/azTeam.png";
+import customer from "../../assets/images/totalTeam.png";
+import  total from "../../assets/images/totallogo.png";
 
 export function TestimonialSection() {
   return (
@@ -36,11 +36,11 @@ export function TestimonialSection() {
 
             <div className="flex flex-col sm:flex-row items-center justify-center md:justify-start gap-4">
               <p className="text-lg sm:text-xl md:text-2xl font-semibold">
-                A-Z Petroleum
+                Total Energies
               </p>
               <img
-                src={AZ}
-                alt="a-z Logo"
+                src={total}
+                alt="total Logo"
                 className="h-16 sm:h-[100px] w-auto"
               />
             </div>
