@@ -1,0 +1,71 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
+
+@import "tailwindcss";
+
+/* .div-one, .div-two{
+    width: 100%;
+    height: 300px;
+}
+
+.img{
+    width: 25%;
+    object-fit: cover;
+}
+
+@media screen and (max-width: 780px){
+    .div-one, .div-two{
+        height: 200px;
+    }
+}
+
+.img {
+    padding: 0;
+    margin: 0;
+  } */
+
+  body {
+    font-family: 'Poppins', sans-serif;
+  }
+
+  :root {
+    --scroll-duration: 30s;
+  }
+  
+  .img-div {
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+    padding: 20px 0;
+  }
+  
+  .div-one, .div-two {
+    display: flex;
+    animation: slideImages var(--scroll-duration) linear infinite;
+    white-space: nowrap;
+    width: 100%;
+    height: 300px;
+  }
+  
+  .div-two {
+    animation-delay: calc(-1 * var(--scroll-duration) / 2);
+    margin-top: 10px;
+  }
+  
+  .img {
+    display: block;
+    width: 25%;
+    object-fit: cover;
+    border-radius: 40px ;
+    padding: 5px;
+    margin: 0;
+  }
+  
+  @keyframes slideImages {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(-50%);
+    }
+  }
