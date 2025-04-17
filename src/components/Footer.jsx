@@ -2,7 +2,14 @@ import React from "react";
 import Logo from "../assets/images/logoHDM.svg";
 import Facebook from "../assets/images/facebook.png";
 import Insta from "../assets/images/instagram.png";
+import { Link } from "react-router-dom";
 
+
+// Function to scroll to the top when a link is clicked
+const handleClick = () => {
+  window.scrollTo({ top: 0, behavior: "smooth" });
+  setIsOpen(false); // Close mobile menu after clicking
+};
 const Footer = () => {
   const getCurrentYear = () => new Date().getFullYear();
 
@@ -32,13 +39,23 @@ const Footer = () => {
         {/* Quick Links */}
         <div className="space-y-4">
           <h3 className="text-xl font-semibold">Quick Links</h3>
-          <ul className="space-y-2">
-            <li className="hover:text-orange-500 transition"><a href="/">Home</a></li>
-            <li className="hover:text-orange-500 transition"><a href="/about-us">About Us</a></li>
-            <li className="hover:text-orange-500 transition"><a href="/contact-us">Contact Us</a></li>
-            <li className="hover:text-orange-500 transition"><a href="/products">Products</a></li>
-            <li className="hover:text-orange-500 transition"><a href="/services">Services</a></li>
-          </ul>
+          <div className="">
+            <Link to="/" onClick={handleClick}>
+            <ul className="hover:text-orange-500 transition pb-2">Home</ul>
+            </Link>
+            <Link to="/about-us" onClick={handleClick}>
+            <ul className="hover:text-orange-500 transition pb-2">About Us</ul>
+            </Link>
+            <Link to="/contact-us" onClick={handleClick}>
+            <ul className="hover:text-orange-500 transition pb-2">Contact Us</ul>
+            </Link>
+            <Link to="/products" onClick={handleClick} >
+            <ul className="hover:text-orange-500 transition pb-2">Products</ul>
+            </Link>
+            <Link to="/services" onClick={handleClick} >
+            <ul className="hover:text-orange-500 transition pb-2">Services</ul>
+            </Link>
+          </div>
         </div>
 
         {/* Social Media */}
@@ -52,8 +69,9 @@ const Footer = () => {
               rel="noopener noreferrer"
             >
               <img src={Facebook} alt="Facebook" className="w-10 h-10 hover:scale-110 transition" />
-            </a>
+            
             <p>Facebook</p>
+            </a>
             </div>
             <div className="flex flex-row items-center gap-x-3">
             <a
@@ -62,8 +80,9 @@ const Footer = () => {
               rel="noopener noreferrer"
             >
               <img src={Insta} alt="Instagram" className="w-10 h-10 hover:scale-110 transition" />
-            </a>
+            
             <p>Instagram</p>
+            </a>
             </div>
           </div>
         </div>

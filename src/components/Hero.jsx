@@ -154,7 +154,7 @@ const Hero = () => {
               <h3 className="text-2xl font-bold mt-4">{title}</h3>
               <p className="text-lg font-light mt-2">{desc}</p>
               <Link to={index === 0 ? "/about-us" : index === 1 ? "/contact-us" : "/products"}>
-                <button className="block text-2xl font-light underline mt-2">Learn more</button>
+                <button className="block text-2xl font-light underline mt-2 pl-20">Learn more</button>
               </Link>
             </div>
           ))}
@@ -163,7 +163,7 @@ const Hero = () => {
 
       {/* Achievements Section */}
       <section className="bg-[#FC7A1E] py-16 text-white flex flex-col lg:flex-row items-center justify-between px-6">
-        <div className="max-w-lg pl-10">
+        <div className=" pl-17">
           <h2 className="text-5xl">Discover Our Impressive</h2>
           <h2 className="text-5xl mt-3">Achievements in Engine Oil</h2>
           <h2 className="text-5xl mt-3 pb-10">Distribution</h2>
