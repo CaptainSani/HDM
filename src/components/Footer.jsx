@@ -4,7 +4,6 @@ import Facebook from "../assets/images/facebook.png";
 import Insta from "../assets/images/instagram.png";
 import { Link } from "react-router-dom";
 
-
 // Function to scroll to the top when a link is clicked
 const handleClick = () => {
   window.scrollTo({ top: 0, behavior: "smooth" });
@@ -39,21 +38,29 @@ const Footer = () => {
         {/* Quick Links */}
         <div className="space-y-4">
           <h3 className="text-xl font-semibold">Quick Links</h3>
-          <div className="">
+          <div>
             <Link to="/" onClick={handleClick}>
-            <ul className="hover:text-orange-500 transition pb-2">Home</ul>
+              <ul className="hover:text-orange-500 transition pb-2">Home</ul>
             </Link>
             <Link to="/about-us" onClick={handleClick}>
-            <ul className="hover:text-orange-500 transition pb-2">About Us</ul>
+              <ul className="hover:text-orange-500 transition pb-2">
+                About Us
+              </ul>
             </Link>
             <Link to="/contact-us" onClick={handleClick}>
-            <ul className="hover:text-orange-500 transition pb-2">Contact Us</ul>
+              <ul className="hover:text-orange-500 transition pb-2">
+                Contact Us
+              </ul>
             </Link>
-            <Link to="/products" onClick={handleClick} >
-            <ul className="hover:text-orange-500 transition pb-2">Products</ul>
+            <Link to="/products" onClick={handleClick}>
+              <ul className="hover:text-orange-500 transition pb-2">
+                Products
+              </ul>
             </Link>
-            <Link to="/services" onClick={handleClick} >
-            <ul className="hover:text-orange-500 transition pb-2">Services</ul>
+            <Link to="/services" onClick={handleClick}>
+              <ul className="hover:text-orange-500 transition pb-2">
+                Services
+              </ul>
             </Link>
           </div>
         </div>
@@ -63,26 +70,34 @@ const Footer = () => {
           <h3 className="text-xl font-semibold mb-4">Connect With Us</h3>
           <div className="flex space-x-4 flex-col gap-y-5">
             <div className="flex flex-row items-center gap-x-3">
-            <a
-              href="https://www.facebook.com/share/16MTPwjxtB/?mibextid=wwXIfr"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <img src={Facebook} alt="Facebook" className="w-10 h-10 hover:scale-110 transition" />
-            
-            <p>Facebook</p>
-            </a>
+              <a
+                href="https://www.facebook.com/share/16MTPwjxtB/?mibextid=wwXIfr"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <img
+                  src={Facebook}
+                  alt="Facebook"
+                  className="w-10 h-10 hover:scale-110 transition"
+                />
+
+                <p>Facebook</p>
+              </a>
             </div>
             <div className="flex flex-row items-center gap-x-3">
-            <a
-              href="https://www.instagram.com/hamisudantinki?igsh=MThhcmNuZ3Z1eXdneQ=="
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <img src={Insta} alt="Instagram" className="w-10 h-10 hover:scale-110 transition" />
-            
-            <p>Instagram</p>
-            </a>
+              <a
+                href="https://www.instagram.com/hamisudantinki?igsh=MThhcmNuZ3Z1eXdneQ=="
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <img
+                  src={Insta}
+                  alt="Instagram"
+                  className="w-10 h-10 hover:scale-110 transition"
+                />
+
+                <p>Instagram</p>
+              </a>
             </div>
           </div>
         </div>
